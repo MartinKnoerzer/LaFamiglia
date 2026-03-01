@@ -26,9 +26,14 @@ Dann im Browser die angezeigte Adresse (z. B. `http://localhost:8080`) aufrufen.
 
 **Über GitHub Pages (öffentlich zugänglich):**
 
-1. Repository-Einstellungen → *Pages*
-2. Branch `main` (oder aktuellen Branch), Ordner `/ (root)` wählen
-3. *Save* klicken – GitHub generiert eine öffentliche URL (z. B. `https://<nutzername>.github.io/LaFamiglia/`)
+🔗 **https://martinknoerzer.github.io/LaFamiglia/**
+
+Die Seite wird automatisch bei jedem Push auf `main` über einen GitHub Actions Workflow (`.github/workflows/deploy.yml`) neu veröffentlicht.
+
+Einmalige Einrichtung in den Repository-Einstellungen:
+1. *Settings → Pages*
+2. Unter **Source**: **GitHub Actions** auswählen
+3. Beim nächsten Push auf `main` wird die Seite automatisch bereitgestellt
 
 ---
 
@@ -39,6 +44,7 @@ Dann im Browser die angezeigte Adresse (z. B. `http://localhost:8080`) aufrufen.
 | `index.html` | Einzelne HTML-Seite auf Deutsch: Navbar, Hero, Über uns, Speisekarte, Reservierung, Kontakt & Öffnungszeiten, Footer |
 | `styles.css` | Responsive Layout mit CSS Custom Properties; mobiles Hamburger-Menü; italienische Farbpalette (Dunkelrot `#8b1a1a`, Gold `#d4a843`) |
 | `script.js`  | Vanilla JS: Mobiler Nav-Toggle, scroll-basiertes Hervorheben des aktiven Links, Mindestdatum der Reservierung auf heute gesetzt, Formular-Feedback |
+| `.github/workflows/deploy.yml` | GitHub Actions Workflow – veröffentlicht die Seite bei jedem Push auf `main` automatisch auf GitHub Pages |
 
 ## Hinweis
 
