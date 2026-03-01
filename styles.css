@@ -1,0 +1,438 @@
+/* ==========================================
+   La Famiglia – Styles
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #c0392b;
+    --color-primary-dark: #96281b;
+    --color-gold: #d4a017;
+    --color-dark: #1a1a1a;
+    --color-text: #333333;
+    --color-light: #fdf6ec;
+    --color-white: #ffffff;
+    --color-gray: #f5f5f5;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+    --border-radius: 8px;
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-primary);
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
+}
+
+/* ── Navbar ── */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.97);
+    z-index: 1000;
+    padding: 0.9rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.logo-la {
+    color: var(--color-gold);
+}
+
+.logo-famiglia {
+    color: var(--color-white);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-gold);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ── Hero ── */
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    padding: 0 1.5rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+    color: var(--color-gold);
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.85rem 2.2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ── About ── */
+.about {
+    padding: 5rem 0;
+    background: var(--color-light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-white);
+    padding: 1rem 1.2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.value-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.value-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+    color: var(--color-dark);
+}
+
+.value-item p {
+    font-size: 0.88rem;
+    color: #666;
+}
+
+/* ── Menu ── */
+.menu {
+    padding: 5rem 0;
+    background: var(--color-white);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+.menu-card {
+    background: var(--color-gray);
+    border-radius: var(--border-radius);
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #ececec;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--color-primary);
+}
+
+.menu-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.menu-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+}
+
+.price {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ── Contact ── */
+.contact {
+    padding: 5rem 0;
+    background: var(--color-light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.contact-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: var(--color-dark);
+}
+
+.contact-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-dark);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.contact-form input,
+.contact-form select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+    background: var(--color-white);
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* ── Footer ── */
+.footer {
+    background: var(--color-dark);
+    color: #aaa;
+    text-align: center;
+    padding: 1.8rem 0;
+    font-size: 0.88rem;
+}
+
+.footer p + p {
+    margin-top: 0.4rem;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: var(--color-gold);
+}
+
+/* Screen-reader-only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--color-dark);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}

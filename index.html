@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Famiglia – Authentische Italienische Küche</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-la">La</span><span class="logo-famiglia">Famiglia</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#menu">Menü</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menü öffnen">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Willkommen bei <br><span>La Famiglia</span></h1>
+            <p>Authentische italienische Küche – mit Liebe zubereitet seit 1998</p>
+            <a href="#menu" class="btn-primary">Unser Menü</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Unsere Geschichte</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>La Famiglia steht für echte italienische Gastfreundschaft. Gegründet von der Familie Knoerzer, bringen wir die Aromen Italiens direkt auf Ihren Tisch.</p>
+                    <p>Unsere Rezepte werden von Generation zu Generation weitergegeben – frisch, ehrlich und mit Leidenschaft zubereitet. Bei uns sitzen Sie nicht einfach in einem Restaurant, Sie sind Teil der Familie.</p>
+                </div>
+                <div class="about-values">
+                    <div class="value-item">
+                        <span class="value-icon">🍅</span>
+                        <h3>Frische Zutaten</h3>
+                        <p>Täglich frisch vom Markt</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">👨‍🍳</span>
+                        <h3>Handgemacht</h3>
+                        <p>Pasta, Saucen &amp; Teig – alles selbst gemacht</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">❤️</span>
+                        <h3>Mit Liebe</h3>
+                        <p>Jedes Gericht ein Herzstück</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Unsere Spezialitäten</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-emoji">🍕</div>
+                    <h3>Pizza</h3>
+                    <p>Holzofenpizza nach neapolitanischer Art</p>
+                    <span class="price">ab 9,90 €</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-emoji">🍝</div>
+                    <h3>Pasta</h3>
+                    <p>Hausgemachte Pasta mit traditionellen Saucen</p>
+                    <span class="price">ab 11,90 €</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-emoji">🥩</div>
+                    <h3>Fleischgerichte</h3>
+                    <p>Ossobuco, Saltimbocca &amp; mehr</p>
+                    <span class="price">ab 16,90 €</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-emoji">🍮</div>
+                    <h3>Desserts</h3>
+                    <p>Tiramisu, Panna Cotta &amp; hausgemachtes Gelato</p>
+                    <span class="price">ab 5,90 €</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-emoji">🥗</div>
+                    <h3>Antipasti</h3>
+                    <p>Bruschetta, Caprese &amp; gemischte Vorspeisen</p>
+                    <span class="price">ab 6,90 €</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-emoji">🍷</div>
+                    <h3>Weine</h3>
+                    <p>Erlesene Weine aus ganz Italien</p>
+                    <span class="price">ab 4,50 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Besuchen Sie uns</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>Via della Famiglia 1<br>80331 München</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <h3>Öffnungszeiten</h3>
+                            <p>Mo – Fr: 11:30 – 22:00 Uhr<br>Sa – So: 12:00 – 23:00 Uhr</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h3>Reservierung</h3>
+                            <p>+49 89 123 456 78<br>info@lafamiglia.de</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Tisch reservieren</h3>
+                    <form id="reservation-form">
+                        <label for="res-name" class="sr-only">Ihr Name</label>
+                        <input id="res-name" type="text" placeholder="Ihr Name" required>
+                        <label for="res-email" class="sr-only">E-Mail Adresse</label>
+                        <input id="res-email" type="email" placeholder="E-Mail Adresse" required>
+                        <label for="res-date" class="sr-only">Datum</label>
+                        <input id="res-date" type="date" required>
+                        <label for="res-guests" class="sr-only">Anzahl Personen</label>
+                        <select id="res-guests" aria-label="Anzahl Personen">
+                            <option value="">Anzahl Personen</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                            <option value="5+">5+ Personen</option>
+                        </select>
+                        <button type="submit" class="btn-primary">Reservierung anfragen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 La Famiglia · Alle Rechte vorbehalten</p>
+            <p>
+                <a href="#">Impressum</a> &nbsp;|&nbsp;
+                <a href="#">Datenschutz</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Reservation form – handle submission on static site
+        const reservationForm = document.getElementById('reservation-form');
+        if (reservationForm) {
+            reservationForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Vielen Dank! Wir haben Ihre Reservierungsanfrage erhalten und melden uns in Kürze.');
+                reservationForm.reset();
+            });
+        }
+
+        // Mobile nav toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
