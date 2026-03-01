@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Famiglia | Ristorante Italiano</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">La Famiglia</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#oeffnungszeiten" class="nav-link">Öffnungszeiten</a>
+                <a href="#speisekarte" class="nav-link">Speisekarte</a>
+                <a href="#gaststaette" class="nav-link">Gaststätte</a>
+                <a href="#terrasse" class="nav-link">Terrasse</a>
+                <a href="#kontakt" class="nav-link">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section (Hero with Carousel) -->
+    <section id="home" class="section hero-section">
+        <!-- Swiper -->
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('assets/Clubheim_von_aussen.jpg');">
+                    <div class="overlay"></div>
+                    <div class="hero-content">
+                        <h1>Benvenuto alla Famiglia</h1>
+                        <p>Autentica Cucina Italiana a Walldürn-Altheim</p>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('assets/VfB-Clubheim_Gastraum_01.jpg');">
+                    <div class="overlay"></div>
+                    <div class="hero-content">
+                        <h1>Gemütliches Ambiente</h1>
+                        <p>Genießen Sie bei uns unvergessliche Abende.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Öffnungszeiten Section -->
+    <section id="oeffnungszeiten" class="section dark-section">
+        <div class="container">
+            <h2>Öffnungszeiten</h2>
+            <div class="decor-line"></div>
+            <div class="hours-grid">
+                <ul class="hours-list">
+                    <li><span>Montag</span> <span>17:00 – 22:00 Uhr</span></li>
+                    <li><span>Dienstag</span> <span class="highlight">Ruhetag</span></li>
+                    <li><span>Mittwoch</span> <span>17:00 – 22:00 Uhr</span></li>
+                    <li><span>Donnerstag</span> <span>17:00 – 22:00 Uhr</span></li>
+                    <li><span>Freitag</span> <span>17:00 – 22:00 Uhr</span></li>
+                    <li><span>Samstag</span> <span>17:00 – 22:00 Uhr</span></li>
+                    <li><span>Sonntag</span> <span>11:00 – 14:00 Uhr & 17:00 – 22:00 Uhr</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speisekarte Section -->
+    <section id="speisekarte" class="section light-section">
+        <div class="container">
+            <h2>Speisekarte & Wochenkarte</h2>
+            <div class="decor-line"></div>
+            <p class="subtitle">Entdecken Sie unsere aktuellen Angebote und Gerichte.</p>
+
+            <div class="wochenkarte-container" style="text-align: center; margin-bottom: 40px;">
+                <h3>Aktuelle Wochenkarte</h3>
+                <img src="assets/Wochenkarte_0202-08022026-828x1536.jpeg" alt="Wochenkarte"
+                    style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px;">
+            </div>
+
+            <div class="pdf-download">
+                <a href="assets/Speissekarte_2025.pdf" class="btn primary-btn" target="_blank">Unsere Speisekarte als
+                    PDF ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaststätte Section -->
+    <section id="gaststaette" class="section dark-section">
+        <div class="container">
+            <h2>Die Gaststätte</h2>
+            <div class="decor-line"></div>
+            <!-- Swiper -->
+            <div class="swiper gallerySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/VfB-Clubheim_Gastraum_01.jpg" alt="Gaststätte Innenbereich 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/VfB-Cubheim-von-oben.jpg" alt="Gaststätte Übersicht">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terrasse Section -->
+    <section id="terrasse" class="section light-section">
+        <div class="container">
+            <h2>Die Terrasse</h2>
+            <div class="decor-line"></div>
+            <!-- Swiper -->
+            <div class="swiper gallerySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/Clubheim_Terasse-01.jpg" alt="Terrasse Außenbereich 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Clubheim_Terasse_02.jpg" alt="Terrasse Außenbereich 2">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="section dark-section footer-section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="decor-line"></div>
+            <div class="contact-info">
+                <h3>Ristorante La Famiglia</h3>
+                <p>An den Hofäckern 29</p>
+                <p>74731 Walldürn-Altheim</p>
+                <p class="phone-number">Telefon: 01234 / 567890 (Beispiel)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ristorante La Famiglia. Alle Rechte vorbehalten. | <a href="impressum.html"
+                    style="color: var(--primary-color);">Impressum & Datenschutz</a></p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Bildergalerie. Alle Rechte vorbehalten.</p>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
