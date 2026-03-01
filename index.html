@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Famiglia Vereinsrestaurant – authentische italienische Küche in entspannter Atmosphäre." />
+  <title>La Famiglia – Vereinsrestaurant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar" role="navigation" aria-label="Hauptnavigation">
+    <a href="#hero" class="nav-brand">La Famiglia</a>
+    <button id="hamburger" class="hamburger" aria-label="Menü öffnen" aria-controls="nav-links" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#speisekarte">Speisekarte</a></li>
+      <li><a href="#reservierung">Reservierung</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>La Famiglia</h1>
+      <p>Vereinsrestaurant &amp; Trattoria – Herzlich Willkommen!</p>
+      <a href="#speisekarte" class="btn btn-primary">Zur Speisekarte</a>
+      <a href="#reservierung" class="btn btn-outline">Tisch reservieren</a>
+    </div>
+  </section>
+
+  <!-- ── ÜBER UNS ── -->
+  <section id="ueber-uns">
+    <div class="container">
+      <h2 class="section-title">Über uns</h2>
+      <p class="section-subtitle">Eine Familie – eine Leidenschaft</p>
+      <div class="divider"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Willkommen bei <strong>La Famiglia</strong> – unserem Vereinsrestaurant, das seit Jahren
+            Mitglieder und Gäste mit echter italienischer Hausmannskost verwöhnt. Hier treffen
+            sich Freunde, Familien und Vereinsmitglieder bei gutem Essen, gepflegten Weinen und
+            herzlicher Atmosphäre.
+          </p>
+          <p>
+            Unsere Köche bereiten täglich frische Gerichte nach traditionellen Rezepten zu –
+            von hausgemachter Pasta über knusprige Pizza bis hin zu saisonalen Spezialitäten.
+            Wir legen großen Wert auf regionale Zutaten und Qualität.
+          </p>
+          <p>
+            Ob ein gemütlicher Abend zu zweit, ein Vereinstreffen oder eine Familienfeier –
+            bei uns sind Sie genau richtig!
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <h3>🍝 Hausgemachte Pasta</h3>
+            <p>Täglich frisch zubereitet nach original Rezepten aus Italien.</p>
+          </div>
+          <div class="highlight-card">
+            <h3>🍕 Knusprige Pizza</h3>
+            <p>Aus unserem Steinofen – dünner Boden, erstklassige Zutaten.</p>
+          </div>
+          <div class="highlight-card">
+            <h3>🍷 Ausgewählte Weine</h3>
+            <p>Sorgfältig ausgewählte Weine aus Italien und der Region.</p>
+          </div>
+          <div class="highlight-card">
+            <h3>🤝 Vereinstreffen</h3>
+            <p>Räumlichkeiten für Veranstaltungen und Vereinsabende buchbar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SPEISEKARTE ── -->
+  <section id="speisekarte">
+    <div class="container">
+      <h2 class="section-title">Speisekarte</h2>
+      <p class="section-subtitle">Frisch, ehrlich, italienisch</p>
+      <div class="divider"></div>
+
+      <div class="menu-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="vorspeisen" role="tab" aria-selected="true">Vorspeisen</button>
+        <button class="tab-btn" data-tab="pasta"      role="tab" aria-selected="false">Pasta &amp; Risotto</button>
+        <button class="tab-btn" data-tab="pizza"      role="tab" aria-selected="false">Pizza</button>
+        <button class="tab-btn" data-tab="hauptgerichte" role="tab" aria-selected="false">Hauptgerichte</button>
+        <button class="tab-btn" data-tab="desserts"   role="tab" aria-selected="false">Desserts</button>
+      </div>
+
+      <!-- Vorspeisen -->
+      <div id="vorspeisen" class="menu-panel active" role="tabpanel">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Bruschetta al Pomodoro</h3>
+            <p>Röstbrot mit frischen Tomaten, Basilikum und Knoblauch</p>
+          </div>
+          <span class="menu-item-price">6,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Carpaccio di Manzo</h3>
+            <p>Dünn geschnittenes Rindfleisch, Rucola, Parmesan, Zitronen-Öl</p>
+          </div>
+          <span class="menu-item-price">11,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Antipasto Misto</h3>
+            <p>Gemischte italienische Vorspeiseplatte für zwei Personen</p>
+          </div>
+          <span class="menu-item-price">16,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Zuppa del Giorno</h3>
+            <p>Tagessuppe nach Marktangebot</p>
+          </div>
+          <span class="menu-item-price">5,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Burrata con Prosciutto</h3>
+            <p>Frische Burrata mit Parmaschinken und Kirschtomaten</p>
+          </div>
+          <span class="menu-item-price">12,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Insalata Caprese</h3>
+            <p>Büffelmozzarella, Tomaten, frisches Basilikum</p>
+          </div>
+          <span class="menu-item-price">9,00 €</span>
+        </div>
+      </div>
+
+      <!-- Pasta & Risotto -->
+      <div id="pasta" class="menu-panel" role="tabpanel">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Spaghetti Carbonara</h3>
+            <p>Original mit Guanciale, Ei, Pecorino Romano, schwarzem Pfeffer</p>
+          </div>
+          <span class="menu-item-price">13,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Tagliatelle al Ragù</h3>
+            <p>Hausgemachte Tagliatelle mit langsam geschmortem Fleischragù</p>
+          </div>
+          <span class="menu-item-price">14,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Penne all'Arrabbiata</h3>
+            <p>Penne mit scharfer Tomaten-Knoblauch-Sauce und Kapern</p>
+          </div>
+          <span class="menu-item-price">12,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Risotto ai Funghi Porcini</h3>
+            <p>Cremiges Risotto mit Steinpilzen und Parmesan</p>
+          </div>
+          <span class="menu-item-price">15,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Linguine alle Vongole</h3>
+            <p>Linguine mit Venusmuscheln, Knoblauch, Weißwein, Petersilie</p>
+          </div>
+          <span class="menu-item-price">17,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Gnocchi al Gorgonzola</h3>
+            <p>Hausgemachte Gnocchi in cremiger Gorgonzola-Sauce</p>
+          </div>
+          <span class="menu-item-price">13,00 €</span>
+        </div>
+      </div>
+
+      <!-- Pizza -->
+      <div id="pizza" class="menu-panel" role="tabpanel">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Pizza Margherita</h3>
+            <p>Tomatensauce, Mozzarella, Basilikum</p>
+          </div>
+          <span class="menu-item-price">10,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Pizza Diavola</h3>
+            <p>Tomatensauce, Mozzarella, scharfe Salami, Chili</p>
+          </div>
+          <span class="menu-item-price">13,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Pizza Quattro Stagioni</h3>
+            <p>Vier Jahreszeiten: Artischocken, Schinken, Pilze, Oliven</p>
+          </div>
+          <span class="menu-item-price">14,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Pizza Prosciutto e Rucola</h3>
+            <p>Parmaschinken, Rucola, Kirschtomaten, Parmesan</p>
+          </div>
+          <span class="menu-item-price">14,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Pizza Frutti di Mare</h3>
+            <p>Meeresfrüchte, Tomatensauce, Knoblauch, Petersilie</p>
+          </div>
+          <span class="menu-item-price">16,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Calzone Classico</h3>
+            <p>Gefüllt mit Ricotta, Schinken, Mozzarella</p>
+          </div>
+          <span class="menu-item-price">13,50 €</span>
+        </div>
+      </div>
+
+      <!-- Hauptgerichte -->
+      <div id="hauptgerichte" class="menu-panel" role="tabpanel">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Saltimbocca alla Romana</h3>
+            <p>Kalbsschnitzel mit Salbei und Parmaschinken, Marsala-Sauce</p>
+          </div>
+          <span class="menu-item-price">21,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Branzino al Forno</h3>
+            <p>Ofengebackener Wolfsbarsch mit Kräutern, Zitrone und Kapern</p>
+          </div>
+          <span class="menu-item-price">23,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Pollo alla Parmigiana</h3>
+            <p>Hähnchenbrust überbacken mit Tomaten und Mozzarella</p>
+          </div>
+          <span class="menu-item-price">18,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Bistecca alla Fiorentina</h3>
+            <p>T-Bone-Steak vom Holzkohlegrill, Rosmarinkartoffeln (400g)</p>
+          </div>
+          <span class="menu-item-price">34,00 €</span>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div id="desserts" class="menu-panel" role="tabpanel">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Tiramisù della Casa</h3>
+            <p>Hausgemachtes Tiramisù nach dem Originalrezept</p>
+          </div>
+          <span class="menu-item-price">6,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Panna Cotta al Caramello</h3>
+            <p>Mit Karamellsauce und frischen Beeren</p>
+          </div>
+          <span class="menu-item-price">6,00 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Gelato Artigianale</h3>
+            <p>3 Kugeln hausgemachtes Eis nach Wahl mit Sahne</p>
+          </div>
+          <span class="menu-item-price">5,50 €</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Cannoli Siciliani</h3>
+            <p>Knusprige Teigrolle mit Ricotta-Füllung und kandierten Früchten</p>
+          </div>
+          <span class="menu-item-price">5,50 €</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RESERVIERUNG ── -->
+  <section id="reservierung">
+    <div class="container">
+      <h2 class="section-title">Tisch reservieren</h2>
+      <p class="section-subtitle">Wir freuen uns auf Ihren Besuch</p>
+      <div class="divider"></div>
+
+      <form id="reservierungs-formular" class="reservation-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Ihr vollständiger Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" placeholder="ihre@email.de" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+49 123 456789" />
+          </div>
+          <div class="form-group">
+            <label for="personen">Personen *</label>
+            <select id="personen" name="personen" required>
+              <option value="">Bitte wählen</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 Personen</option>
+              <option value="3">3 Personen</option>
+              <option value="4">4 Personen</option>
+              <option value="5">5 Personen</option>
+              <option value="6">6 Personen</option>
+              <option value="7–10">7–10 Personen</option>
+              <option value="10+">Mehr als 10</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="datum">Datum *</label>
+            <input type="date" id="datum" name="datum" required />
+          </div>
+          <div class="form-group">
+            <label for="uhrzeit">Uhrzeit</label>
+            <select id="uhrzeit" name="uhrzeit">
+              <option value="">Bitte wählen</option>
+              <option value="12:00">12:00 Uhr</option>
+              <option value="12:30">12:30 Uhr</option>
+              <option value="13:00">13:00 Uhr</option>
+              <option value="13:30">13:30 Uhr</option>
+              <option value="18:00">18:00 Uhr</option>
+              <option value="18:30">18:30 Uhr</option>
+              <option value="19:00">19:00 Uhr</option>
+              <option value="19:30">19:30 Uhr</option>
+              <option value="20:00">20:00 Uhr</option>
+              <option value="20:30">20:30 Uhr</option>
+              <option value="21:00">21:00 Uhr</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1.25rem">
+          <label for="anmerkungen">Anmerkungen &amp; Sonderwünsche</label>
+          <textarea id="anmerkungen" name="anmerkungen" placeholder="Allergien, besondere Anlässe, Hochstühle …"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        </div>
+        <div id="form-feedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── KONTAKT & ÖFFNUNGSZEITEN ── -->
+  <section id="kontakt">
+    <div class="container">
+      <h2 class="section-title">Kontakt &amp; Öffnungszeiten</h2>
+      <p class="section-subtitle">Wir sind für Sie da</p>
+      <div class="divider"></div>
+
+      <div class="kontakt-grid">
+        <div class="kontakt-block">
+          <h3>Kontakt</h3>
+          <p>📍 Musterstraße 1, 12345 Musterstadt</p>
+          <p>📞 <a href="tel:+4912345678">+49 123 45678</a></p>
+          <p>✉️ <a href="mailto:info@lafamiglia-restaurant.de">info@lafamiglia-restaurant.de</a></p>
+          <p style="margin-top:1rem">
+            Reservierungen nehmen wir telefonisch oder per Formular entgegen.<br/>
+            Wir empfehlen eine Reservierung für Gruppen ab 4 Personen.
+          </p>
+        </div>
+        <div class="kontakt-block">
+          <h3>Öffnungszeiten</h3>
+          <table class="hours-table">
+            <tbody>
+              <tr><td>Montag</td><td>Geschlossen</td></tr>
+              <tr><td>Dienstag – Freitag</td><td>12:00 – 14:30 Uhr<br/>18:00 – 22:30 Uhr</td></tr>
+              <tr><td>Samstag</td><td>12:00 – 23:00 Uhr</td></tr>
+              <tr><td>Sonntag</td><td>12:00 – 21:00 Uhr</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:1rem;font-size:.88rem;color:#aaa;">
+            An Feiertagen können die Öffnungszeiten abweichen.<br/>
+            Bitte rufen Sie vorher an.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>&copy; 2025 La Famiglia Vereinsrestaurant · <a href="mailto:info@lafamiglia-restaurant.de">Impressum / Kontakt</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
