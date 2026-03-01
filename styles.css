@@ -1,0 +1,392 @@
+/* =====================================================
+   La Famiglia Vereinsrestaurant – Stylesheet
+   Palette: deep red #8b1a1a · gold #d4a843 · cream #fdf6ec
+   ===================================================== */
+
+:root {
+  --red:    #8b1a1a;
+  --red-dk: #6a1313;
+  --gold:   #d4a843;
+  --cream:  #fdf6ec;
+  --dark:   #1e1e1e;
+  --text:   #333;
+  --nav-h:  64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* ── NAVBAR ──────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,.4);
+  transition: background .3s;
+}
+
+#navbar.scrolled { background: var(--red-dk); }
+
+.nav-brand {
+  color: var(--gold);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: .95rem;
+  padding: .25rem .1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color .25s, color .25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px; height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+
+/* ── HERO ────────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--red-dk) 0%, #3a0a0a 60%, #1a0505 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--nav-h) + 2rem) 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a843' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: .5;
+}
+
+.hero-content { position: relative; z-index: 1; }
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--gold);
+  margin-bottom: .5rem;
+  letter-spacing: .06em;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: #e8d5b0;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.btn {
+  display: inline-block;
+  padding: .85rem 2.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .25s, transform .15s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.btn-primary:hover { background: #c49633; transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  margin-left: .75rem;
+}
+
+.btn-outline:hover { background: var(--gold); color: var(--dark); transform: translateY(-2px); }
+
+/* ── SECTIONS ────────────────────────────────────────── */
+section { padding: 5rem 1.5rem; }
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--red);
+  margin-bottom: .5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: .75rem auto 2.5rem;
+  border-radius: 2px;
+}
+
+/* ── ÜBER UNS ────────────────────────────────────────── */
+#ueber-uns { background: var(--cream); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text p { margin-bottom: 1rem; font-size: 1.05rem; }
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: #fff;
+  border-left: 4px solid var(--gold);
+  padding: 1.25rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+
+.highlight-card h3 { color: var(--red); margin-bottom: .4rem; font-size: 1rem; }
+.highlight-card p  { font-size: .9rem; color: #555; }
+
+/* ── SPEISEKARTE ─────────────────────────────────────── */
+#speisekarte { background: #fff; }
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.tab-btn {
+  padding: .55rem 1.4rem;
+  border: 2px solid var(--red);
+  background: transparent;
+  color: var(--red);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: background .2s, color .2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover { background: var(--red); color: #fff; }
+
+.menu-panel { display: none; }
+.menu-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e8e0d0;
+  border-radius: 6px;
+  gap: 1rem;
+  transition: box-shadow .2s;
+}
+
+.menu-item:hover { box-shadow: 0 4px 12px rgba(139,26,26,.1); }
+
+.menu-item-info h3 { font-size: 1rem; color: var(--dark); margin-bottom: .2rem; }
+.menu-item-info p  { font-size: .85rem; color: #666; }
+
+.menu-item-price {
+  color: var(--red);
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+/* ── RESERVIERUNG ────────────────────────────────────── */
+#reservierung { background: var(--cream); }
+
+.reservation-form {
+  max-width: 660px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group { display: flex; flex-direction: column; }
+
+.form-group label {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: .35rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: .65rem .85rem;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  font-size: .95rem;
+  transition: border-color .2s, box-shadow .2s;
+  background: #fff;
+  color: var(--dark);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,168,67,.2);
+}
+
+.form-group textarea { resize: vertical; min-height: 90px; }
+
+.form-submit { text-align: center; margin-top: .5rem; }
+
+.form-submit .btn { min-width: 200px; }
+
+#form-feedback {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: .95rem;
+  min-height: 1.4em;
+}
+
+#form-feedback.success { color: #2e7d32; }
+#form-feedback.error   { color: var(--red); }
+
+/* ── KONTAKT & ÖFFNUNGSZEITEN ────────────────────────── */
+#kontakt { background: var(--dark); color: #e8d5b0; }
+
+#kontakt .section-title { color: var(--gold); }
+#kontakt .section-subtitle { color: #c8b88a; }
+
+.kontakt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.kontakt-block h3 {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: .5rem;
+}
+
+.kontakt-block p { margin-bottom: .5rem; font-size: .95rem; }
+
+.kontakt-block a { color: var(--gold); text-decoration: none; }
+.kontakt-block a:hover { text-decoration: underline; }
+
+.hours-table { width: 100%; border-collapse: collapse; }
+.hours-table td { padding: .4rem 0; font-size: .95rem; }
+.hours-table td:last-child { text-align: right; color: #c8b88a; }
+
+/* ── FOOTER ──────────────────────────────────────────── */
+footer {
+  background: #111;
+  color: #888;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: .85rem;
+}
+
+footer a { color: var(--gold); text-decoration: none; }
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-h); left: 0; right: 0;
+    background: var(--red-dk);
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .about-grid        { grid-template-columns: 1fr; }
+  .about-highlights  { grid-template-columns: 1fr; }
+  .kontakt-grid      { grid-template-columns: 1fr; }
+  .form-row          { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-content .btn-outline { margin-left: 0; margin-top: .5rem; }
+}
