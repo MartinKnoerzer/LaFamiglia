@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -78,28 +78,64 @@
                     <li><span>Donnerstag</span> <span>17:00 – 22:00 Uhr</span></li>
                     <li><span>Freitag</span> <span>17:00 – 22:00 Uhr</span></li>
                     <li><span>Samstag</span> <span>17:00 – 22:00 Uhr</span></li>
-                    <li><span>Sonntag</span> <span>11:00 – 14:00 Uhr & 17:00 – 22:00 Uhr</span></li>
+                    <li class="sunday-entry">
+                        <span>Sonntag</span>
+                        <span class="sunday-times">
+                            <span>11:00 – 14:00 Uhr</span>
+                            <span>&amp; 17:00 – 22:00 Uhr</span>
+                        </span>
+                    </li>
                 </ul>
+            </div>
+
+            <!-- Abholservice Box -->
+            <div class="abholservice-box">
+                <div class="abholservice-icon">🛍️</div>
+                <div class="abholservice-text">
+                    <strong>Abholservice</strong>
+                    <p>Bestelle deine Wunschessen bequem zum Abholen! Ruf einfach an unter:
+                        <a href="tel:06285929540" class="abholservice-phone">06285 / 929540</a>
+                        und wir bereiten deine Bestellung für dich vor.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Speisekarte Section -->
     <section id="speisekarte" class="section light-section">
-        <div class="container">
-            <h2>Speisekarte & Wochenkarte</h2>
+        <div class="container speisekarte-container">
+            <h2>Speisekarte &amp; Wochenkarte</h2>
             <div class="decor-line"></div>
             <p class="subtitle">Entdecken Sie unsere aktuellen Angebote und Gerichte.</p>
 
-            <div class="wochenkarte-container" style="text-align: center; margin-bottom: 40px;">
-                <h3>Aktuelle Wochenkarte</h3>
-                <img src="assets/Wochenkarte_0202-08022026-828x1536.jpeg" alt="Wochenkarte"
-                    style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px;">
+            <!-- Wochenkarte - modernes Card-Layout -->
+            <div class="wochenkarte-section">
+                <div class="wochenkarte-header">
+                    <span class="wochenkarte-badge">Aktuell</span>
+                    <h3>Wochenkarte</h3>
+                    <p class="wochenkarte-subtext">Unsere aktuellen Gerichte der Woche &ndash; t&auml;glich frisch zubereitet.</p>
+                </div>
+                <div class="wochenkarte-image-wrap">
+                    <img src="assets/Wochenkarte_0202-08022026-828x1536.jpeg" alt="Aktuelle Wochenkarte" class="wochenkarte-img">
+                </div>
             </div>
 
-            <div class="pdf-download">
-                <a href="assets/Speissekarte_2025.pdf" class="btn primary-btn" target="_blank">Unsere Speisekarte als
-                    PDF ansehen</a>
+            <!-- Speisekarte - direkt anzeigen + Download -->
+            <div class="speisekarte-section">
+                <div class="speisekarte-header">
+                    <span class="wochenkarte-badge speisekarte-badge">Speisekarte</span>
+                    <h3>Unsere Speisekarte</h3>
+                    <p class="wochenkarte-subtext">Entdecken Sie unser vollst&auml;ndiges Angebot direkt hier.</p>
+                    <a href="assets/Speissekarte_2025.pdf" download class="btn download-btn">&#11015; Speisekarte herunterladen (PDF)</a>
+                </div>
+                <div class="pdf-embed-wrap">
+                    <iframe src="assets/Speissekarte_2025.pdf" class="pdf-embed" title="Speisekarte La Famiglia">
+                        <p>Ihr Browser unterst&uuml;tzt keine PDF-Vorschau.
+                           <a href="assets/Speissekarte_2025.pdf" target="_blank">Hier klicken zum &Ouml;ffnen.</a>
+                        </p>
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -157,7 +193,7 @@
                 <h3>Ristorante La Famiglia</h3>
                 <p>An den Hofäckern 29</p>
                 <p>74731 Walldürn-Altheim</p>
-                <p class="phone-number">Telefon: 06285 / 929540</p>
+                <p class="phone-number">Telefon: 01234 / 567890 (Beispiel)</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -172,6 +208,5 @@
     <!-- Custom JS -->
     <script src="app.js"></script>
 </body>
-
 
 </html>
